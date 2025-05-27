@@ -1,30 +1,30 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface HeaderProps {
-  className?: string;
+	className?: string;
 }
 
 const Header = ({ className }: HeaderProps) => {
-  return (
-    <div className={className}>
-      <img src="Logo.svg" alt="Huler Todo" />
-    </div>
-  );
+	return (
+		<div className={className}>
+			<img src='Logo.svg' alt='Huler Todo' />
+		</div>
+	);
 };
 
 const StyledHeader = styled(Header)`
-  display: block;
-  padding: 48px 48px 0 48px;
+	display: flex;
+	justify-content: start;
+	padding: 40px;
 
-  > div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
+	img {
+		width: 100px;
+		height: auto;
+	}
 
-  @media (max-width: ${(props) => props.theme.breakpoints.small}) {
-    padding: 200px 20px 0 20px;
-  }
+	@media (max-width: ${(props) => props.theme.breakpoints.small}) {
+		padding: 20px 0 0;
+	}
 `;
 
 export default StyledHeader;
