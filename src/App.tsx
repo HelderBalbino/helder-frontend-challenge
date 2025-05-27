@@ -23,14 +23,9 @@ export default function App() {
 	const [completedItems] = useState(initialCompletedItems);
 
 	const onSubmit = (name: string) => {
-		console.log(name);
-		setItems([...items, { id: items.length + 1, name }]);
+		setItems([...items, { id: 1, name }]);
 		console.log(items);
 	};
-
-	useEffect(() => {
-		setItems(initialItems);
-	}, [items]);
 
 	return (
 		<div className='App'>
