@@ -47,11 +47,11 @@ const StyledAddTodo = styled(AddTodo)`
 		background-color: ${(props) => props.theme.colors.grey2};
 		border: 2px solid ${(props) => props.theme.colors.grey1};
 		border-radius: 24px;
-		color: ${(props) => props.theme.colors.text};
-		font-weight: 300;
 		font-family: ${(props) => props.theme.fonts.primary};
+		font-weight: 300;
 		font-size: 16px;
-		width: 100%;
+		color: ${(props) => props.theme.colors.text};
+
 		&::placeholder {
 			color: ${(props) => props.theme.colors.text};
 			font-weight: 300;
