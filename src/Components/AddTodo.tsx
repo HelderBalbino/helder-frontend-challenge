@@ -11,7 +11,10 @@ const AddTodo = ({ className, onSubmit }: AddTodoProps) => {
 
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault();
-		onSubmit(name);
+		const trimmedName = name.trim();
+		if (!trimmedName) return; // Prevent submission if the input is empty or only contains whitespace
+		onSubmit(trimmedName); // Call the onSubmit prop with the trimmed name
+		setName(''); // Clear the input field after submission
 	};
 
 	return (
