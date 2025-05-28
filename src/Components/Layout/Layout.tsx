@@ -7,18 +7,18 @@ import { ReactNode } from 'react';
 const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap');
     html {
-      background-color: ${(props) => props.theme.colors.grey2};
-      font-family: ${(props) =>
+        background-color: ${(props) => props.theme.colors.grey2};
+        font-family: ${(props) =>
 			props.theme.fonts
 				.primary}, sans-serif !important; // why is this important?
-      color: ${(props) => props.theme.colors.text};
+        color: ${(props) => props.theme.colors.text};
     }
     * {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        box-sizing: border-box;
     }
-  `;
+	`;
 
 // LayoutProps interface defines the props for the Layout component.
 interface LayoutProps {
