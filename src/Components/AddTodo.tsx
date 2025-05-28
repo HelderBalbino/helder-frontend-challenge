@@ -42,10 +42,11 @@ const StyledAddTodo = styled(AddTodo)`
 		overflow: hidden;
 	}
 	input {
-		padding: 23px;
+		flex: 1;
+		padding: 20px 24px;
 		background-color: ${(props) => props.theme.colors.grey2};
 		border: 2px solid ${(props) => props.theme.colors.grey1};
-		outline: none;
+		border-radius: 24px;
 		color: ${(props) => props.theme.colors.text};
 		font-weight: 300;
 		font-family: ${(props) => props.theme.fonts.primary};
