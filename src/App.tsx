@@ -24,7 +24,6 @@ export default function App() {
 
 	const onSubmit = (name: string) => {
 		setItems([...items, { id: 1, name }]);
-		console.log(items);
 	};
 
 	return (
