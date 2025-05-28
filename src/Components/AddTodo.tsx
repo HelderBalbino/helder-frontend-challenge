@@ -64,6 +64,7 @@ const StyledAddTodo = styled(AddTodo)`
 		top: 50%;
 		right: 4px;
 		transform: translateY(-50%);
+		background-color: ${(props) => props.theme.colors.red1};
 		border-radius: 46px;
 		border: none;
 		background-color: blue;
