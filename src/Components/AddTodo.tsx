@@ -63,6 +63,7 @@ const StyledAddTodo = styled(AddTodo)`
 		position: absolute;
 		top: 50%;
 		right: 4px;
+		transform: translateY(-50%);
 		border-radius: 46px;
 		border: none;
 		background-color: blue;
