@@ -68,8 +68,8 @@ const StyledAddTodo = styled(AddTodo)`
 		}
 	}
 	button {
-		width: 48px;
-		height: 48px;
+		width: 40px;
+		height: 40px;
 		position: absolute;
 		top: 50%;
 		right: -60px;
