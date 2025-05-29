@@ -19,16 +19,17 @@ const AddTodo = ({ className, onSubmit }: AddTodoProps) => {
 
 	return (
 		<div className={className}>
-			<form
-				onSubmit={(e) => {
-					handleSubmit(e);
-				}}
-			>
+			<form onSubmit={handleSubmit}>
 				<input
-					placeholder='Enter new Todo...'
+					value={name}
 					onChange={(e) => setName(e.target.value)}
+					placeholder='Enter new todo...'
 				/>
-				<button type='submit' />
+				<button
+					type='submit'
+					disabled={!name.trim()}
+					aria-label='Add Todo'
+				></button>
 			</form>
 		</div>
 	);
