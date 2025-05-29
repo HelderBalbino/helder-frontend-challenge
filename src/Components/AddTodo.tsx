@@ -29,7 +29,9 @@ const AddTodo = ({ className, onSubmit }: AddTodoProps) => {
 					type='submit'
 					disabled={!name.trim()}
 					aria-label='Add Todo'
-				></button>
+				>
+					<img src='Plus.svg' alt='' width={20} height={20} />
+				</button>
 			</form>
 		</div>
 	);
@@ -42,8 +44,7 @@ const StyledAddTodo = styled(AddTodo)`
 	form {
 		display: flex;
 		position: relative;
-		border-radius: 24px;
-		overflow: hidden;
+		overflow: visible; // Allow the button to overflow the input field
 	}
 	input {
 		flex: 1;
@@ -72,17 +73,27 @@ const StyledAddTodo = styled(AddTodo)`
 		top: 50%;
 		right: 4px;
 		transform: translateY(-50%);
-		background-color: ${(props) => props.theme.colors.primary};
 		border: none;
 		border-radius: 50%;
+		background-color: ${(props) => props.theme.colors.primary};
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		cursor: pointer;
-		&:before {
-			background-image: url('Plus.svg');
-			background-size: contain;
-			content: '';
+		transition: background-color 0.2s, opacity 0.2s;
+		&:hover:not(:disabled) {
+			background-color: ${(props) => props.theme.colors.primary};
+		}
+		&:disabled {
+			background-color: ${(props) => props.theme.colors.grey1};
+			cursor: not-allowed;
+			opacity: 0.6;
+		}
+		&:focus {
+			outline: 2px solid ${(p) => p.theme.colors.primary};
+			outline-offset: 2px;
+		}
+		img {
 			width: 20px;
 			height: 20px;
 		}
