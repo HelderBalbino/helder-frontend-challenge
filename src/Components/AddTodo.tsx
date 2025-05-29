@@ -38,8 +38,8 @@ const AddTodo = ({ className, onSubmit }: AddTodoProps) => {
 };
 
 const StyledAddTodo = styled(AddTodo)`
-	width: 100%;
-	margin-bottom: 40px;
+	width: 93%;
+	margin-bottom: 30px;
 	z-index: ${(props) => props.theme.zLayers.overlay};
 	form {
 		display: flex;
@@ -48,10 +48,11 @@ const StyledAddTodo = styled(AddTodo)`
 	}
 	input {
 		flex: 1;
-		padding: 20px 24px;
+		height: 40px;
+		padding: 0px 20px;
 		background-color: ${(props) => props.theme.colors.grey2};
-		border: 2px solid ${(props) => props.theme.colors.grey1};
-		border-radius: 24px;
+		border: 1px solid ${(props) => props.theme.colors.grey3};
+		border-radius: 50px;
 		font-family: ${(props) => props.theme.fonts.primary};
 		font-size: 16px;
 		font-weight: 300;
@@ -71,7 +72,7 @@ const StyledAddTodo = styled(AddTodo)`
 		height: 48px;
 		position: absolute;
 		top: 50%;
-		right: 4px;
+		right: -60px;
 		transform: translateY(-50%);
 		border: none;
 		border-radius: 50%;
