@@ -38,8 +38,9 @@ const AddTodo = ({ className, onSubmit }: AddTodoProps) => {
 };
 
 const StyledAddTodo = styled(AddTodo)`
-	width: 93%;
-	margin-bottom: 30px;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto 30px;
 	z-index: ${(props) => props.theme.zLayers.overlay};
 	form {
 		display: flex;
