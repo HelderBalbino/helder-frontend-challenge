@@ -52,13 +52,17 @@ const StyledAddTodo = styled(AddTodo)`
 		border: 2px solid ${(props) => props.theme.colors.grey1};
 		border-radius: 24px;
 		font-family: ${(props) => props.theme.fonts.primary};
-		font-weight: 300;
 		font-size: 16px;
+		font-weight: 300;
 		color: ${(props) => props.theme.colors.text};
 
 		&::placeholder {
 			color: ${(props) => props.theme.colors.text};
 			font-weight: 300;
+		}
+		&:focus {
+			outline: none;
+			border-color: ${(props) => props.theme.colors.primary};
 		}
 	}
 	button {
