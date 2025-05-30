@@ -23,7 +23,7 @@ const List = ({
 		<section className={className} aria-labelledby={headingId}>
 			<h2 id={headingId}>{title}</h2>
 			{items.length === 0 ? (
-				<p className='empty'>No {title.toLowerCase()} items yet.</p>
+				<p className='empty'>No {title.toLowerCase()} items yet 🙃.</p>
 			) : (
 				<ul>
 					{items.map((item) => (
