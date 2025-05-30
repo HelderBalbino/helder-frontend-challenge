@@ -4,7 +4,9 @@ import { Item } from '../types';
 
 interface ListProps {
 	className?: string;
+	/* Section title, e.g. “Todo” or “Done” */
 	title: string;
+	/* Array of items to render */
 	items: Item[];
 }
 
