@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Handle = styled.button`
 	background: none;
 	border: none;
-	-webkit-appearance: none;
+	appearance: none;
 	margin-right: 24px;
 	cursor: grabbing;
 	width: 10px;

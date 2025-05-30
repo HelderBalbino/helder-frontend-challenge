@@ -14,7 +14,7 @@ const List = ({ className, title, items }: ListProps) => {
 			<h2>{title}</h2>
 			<ul>
 				{items.map((item) => {
-					return <Todo name={item.name} />;
+					return <Todo key={item.id} name={item.name} />;
 				})}
 			</ul>
 		</div>
