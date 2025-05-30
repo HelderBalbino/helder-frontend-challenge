@@ -1,7 +1,9 @@
 const theme = {
 	fonts: {
-		primary: 'Poppins',
+		primary: 'Poppins, sans-serif',
 	},
+	fontSizes: { sm: '0.875rem', base: '1rem', lg: '1.125rem', xl: '1.25rem' },
+	spacings: { xs: '4px', sm: '8px', md: '16px', lg: '24px', xl: '32px' },
 	colors: {
 		primary: '#FB6664',
 		grey1: '#413F49',
