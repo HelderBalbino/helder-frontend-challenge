@@ -20,7 +20,12 @@ const AddTodo = ({ className, onSubmit }: AddTodoProps) => {
 	return (
 		<div className={className}>
 			<form onSubmit={handleSubmit}>
+				<label htmlFor='new-todo' className='sr-only'></label>
 				<input
+					id='new-todo'
+					type='text'
+					name='new-todo'
+					autoComplete='off'
 					value={name}
 					onChange={(e) => setName(e.target.value)}
 					placeholder='Enter new todo...'
@@ -47,6 +52,7 @@ const StyledAddTodo = styled(AddTodo)`
 		position: relative;
 		overflow: visible; // Allow the button to overflow the input field
 	}
+
 	input {
 		flex: 1;
 		height: 40px;
