@@ -104,7 +104,7 @@ const StyledTodo = styled(Todo)`
 	background-color: #2c2c34;
 	border: 1px solid #3d3d47;
 	border-radius: 8px;
-	margin-bottom: 32px;
+	margin-bottom: 20px;
 	padding: 16px;
 	position: relative;
 
@@ -134,6 +134,10 @@ const StyledTodo = styled(Todo)`
 		font-weight: 600;
 		color: white;
 		font-family: ${(props) => props.theme.fonts.primary};
+		text-decoration: ${(props) =>
+			props.item.completed ? 'line-through' : 'none'};
+		opacity: ${(props) => (props.item.completed ? '0.6' : '1')};
+		transition: text-decoration 0.2s ease, opacity 0.2s ease;
 	}
 
 	.add-subtask-btn {
