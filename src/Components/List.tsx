@@ -8,8 +8,6 @@ interface ListProps {
 	title: string;
 	items: Item[];
 	onToggle?: (id: number) => void;
-	onAddSubtask?: (parentId: number, name: string) => void;
-	onToggleSubtask?: (parentId: number, subtaskId: number) => void;
 	dragHandleProps?: any;
 }
 
@@ -18,8 +16,6 @@ const List = ({
 	title,
 	items,
 	onToggle,
-	onAddSubtask,
-	onToggleSubtask,
 	dragHandleProps,
 }: ListProps) => {
 	const headingId = useId();
@@ -27,20 +23,21 @@ const List = ({
 		<section className={className} aria-labelledby={headingId}>
 			<h2 id={headingId}>{title}</h2>
 			{items.length === 0 ? (
-				<p className='empty'>No {title.toLowerCase()} items yet 🙃.</p>
+				<p className='empty'>No {title.toLowerCase()} items yet.</p>
 			) : (
-				<div>
+				<ul>
 					{items.map((item) => (
-						<Todo
-							key={item.id}
-							item={item}
-							onToggle={onToggle}
-							onAddSubtask={onAddSubtask}
-							onToggleSubtask={onToggleSubtask}
-							dragHandleProps={dragHandleProps}
-						/>
+						<li key={item.id}>
+							<Todo
+								id={item.id}
+								name={item.name}
+								completed={item.completed}
+								onToggle={onToggle}
+								dragHandleProps={dragHandleProps}
+							/>
+						</li>
 					))}
-				</div>
+				</ul>
 			)}
 		</section>
 	);
@@ -50,18 +47,23 @@ const StyledList = styled(memo(List))`
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	margin-bottom: 32px;
+	border-bottom: 1px solid ${({ theme }) => theme.colors.grey2};
+	padding: 30px 0;
 
 	h2 {
 		font-weight: 700;
 		margin-bottom: 20px;
-		color: ${({ theme }) => theme.colors.text};
-		font-size: 1.5rem;
 	}
 
 	.empty {
 		font-style: italic;
 		color: ${({ theme }) => theme.colors.grey3};
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
 `;
 
