@@ -50,23 +50,36 @@ const StyledList = styled(memo(List))`
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	border-bottom: 1px solid ${({ theme }) => theme.colors.grey2};
-	padding: 30px 0;
+	padding: 0 0 32px 0;
 
 	h2 {
-		font-weight: 700;
-		margin-bottom: 20px;
+		font-weight: 600;
+		font-size: 18px;
+		color: white;
+		margin-bottom: 16px;
+		margin-top: 24px;
+		padding: 8px 12px;
+		background-color: transparent;
+		border: 1px solid #3d3d47;
+		border-radius: 6px;
+		text-align: left;
+		font-family: ${({ theme }) => theme.fonts.primary};
+	}
+
+	h2:first-of-type {
+		margin-top: 0;
 	}
 
 	.empty {
 		font-style: italic;
 		color: ${({ theme }) => theme.colors.grey3};
+		text-align: center;
+		padding: 24px;
 	}
 
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
+	div {
+		display: flex;
+		flex-direction: column;
 	}
 `;
 
