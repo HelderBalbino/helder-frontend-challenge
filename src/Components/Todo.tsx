@@ -54,7 +54,9 @@ const Todo = ({
 					<div className='todo-header'>
 						<h3>{item.name}</h3>
 						<div
-							className={`checkbox ${item.completed ? 'completed' : ''}`}
+							className={`checkbox ${
+								item.completed ? 'completed' : ''
+							}`}
 							onClick={handleToggle}
 						/>
 					</div>
@@ -63,7 +65,7 @@ const Todo = ({
 							className='add-subtask-btn'
 							onClick={() => setIsExpanded(!isExpanded)}
 						>
-							🕒 {isExpanded ? 'Hide Subtasks' : 'Add Subtask'}
+							{isExpanded ? 'Hide Subtasks' : 'Add Subtask'}
 						</button>
 					)}
 				</div>
