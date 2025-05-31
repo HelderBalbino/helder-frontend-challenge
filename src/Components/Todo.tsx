@@ -104,7 +104,7 @@ const StyledTodo = styled(Todo)`
 	background-color: #2c2c34;
 	border: 1px solid #3d3d47;
 	border-radius: 8px;
-	margin-bottom: 8px;
+	margin-bottom: 32px;
 	padding: 16px;
 	position: relative;
 
