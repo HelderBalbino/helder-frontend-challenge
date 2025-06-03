@@ -27,12 +27,12 @@ const AddTodo = ({ className, onSubmit }: AddTodoProps) => {
 					name='new-todo'
 					autoComplete='off'
 					value={name}
-					onChange={(e) => setName(e.target.value)}
+					onChange={(e) => setName(e.target.value)} // Update state on input change
 					placeholder='Enter new todo...'
 				/>
 				<button
 					type='submit'
-					disabled={!name.trim()}
+					disabled={!name.trim()} // Disable the button if the input is empty or only contains whitespace
 					aria-label='Add Todo'
 				>
 					<img src='Plus.svg' alt='' width={20} height={20} />
