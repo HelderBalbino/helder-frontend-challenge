@@ -6,11 +6,11 @@ const theme = {
 	spacings: { xs: '4px', sm: '8px', md: '16px', lg: '24px', xl: '32px' },
 	colors: {
 		primary: '#00cc88',
-		grey1: '#413F49',
-		grey2: '#1C1B22',
-		grey3: '#807E84',
-		grey4: '#101014',
-		text: '#ffffff',
+		grey1: '#403F49',
+		grey2: '#EEEDEA',
+		grey3: '#403F49',
+		grey4: '#403F49',
+		text: '#403F49',
 	},
 	zLayers: {
 		hidden: -999,
