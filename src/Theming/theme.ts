@@ -5,7 +5,7 @@ const theme = {
 	fontSizes: { sm: '0.875rem', base: '1rem', lg: '1.125rem', xl: '1.25rem' },
 	spacings: { xs: '4px', sm: '8px', md: '16px', lg: '24px', xl: '32px' },
 	colors: {
-		primary: '#FB6664',
+		primary: '#00cc88',
 		grey1: '#413F49',
 		grey2: '#1C1B22',
 		grey3: '#807E84',
