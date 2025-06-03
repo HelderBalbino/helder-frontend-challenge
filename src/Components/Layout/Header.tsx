@@ -7,7 +7,7 @@ interface HeaderProps {
 const Header = ({ className }: HeaderProps) => {
 	return (
 		<div className={className}>
-			<img src='' alt='' />
+			<img src='Logo.png' alt='ideal task manager logo' />
 		</div>
 	);
 };
